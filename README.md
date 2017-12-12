@@ -32,8 +32,8 @@ java -jar ./build/libs/rx-web-crawler-0.1.0.jar
 #### REST API
 api specificaiton has been detailed in document api-specification.txt
 
-Method | URI | Description
---- | --- | --- | --- | --- | ---
+http://localhost:8080/crawler/search/
+
 `POST` | */crawler/search/ | crawler for specificaiton domain
 
 
