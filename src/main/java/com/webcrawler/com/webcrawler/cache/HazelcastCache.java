@@ -1,4 +1,4 @@
-package webcrawler.cache;
+package com.webcrawler.com.webcrawler.cache;
 
 import com.hazelcast.cache.ICache;
 import com.hazelcast.config.Config;

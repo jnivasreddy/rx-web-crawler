@@ -1,8 +1,8 @@
 package com.webcrawler.resource;
 
 
-import webcrawler.dto.CrawlerDto;
-
+import com.webcrawler.dto.CrawlerDto;
+import com.webcrawler.dto.CrawlerResponse;
 import com.webcrawler.service.SampleWebcrawlerService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Set;
 
 /**
  * Created by sjanga on 12/11/2017.
@@ -25,7 +23,7 @@ public class SampleWebcrawlerResource {
 
   @RequestMapping(value = "/search", produces = "application/json",
       consumes = "application/json", method = RequestMethod.POST)
-  public Set<String> searchDomain(@RequestBody CrawlerDto crawlerDto) {
+  public CrawlerResponse searchDomain(@RequestBody CrawlerDto crawlerDto) {
 
     return sampleWebcrawlerService.search(crawlerDto.getDomain());
   }
